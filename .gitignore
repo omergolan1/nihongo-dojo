@@ -1,0 +1,5 @@
+index.zip
+publish-log.txt
+android/
+*.keystore
+*.apk
