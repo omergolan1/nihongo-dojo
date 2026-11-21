@@ -1,7 +1,7 @@
 /* Nihongo Dojo – service worker: works offline after the first visit.
    Pages: network first (so updates arrive), everything else: cache first + refresh in the background.
    API calls (Claude, Supabase sync) are never cached. */
-const CACHE = 'nihongo-dojo-v2';
+const CACHE = 'nihongo-dojo-v3';
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(['./', './manifest.webmanifest', './icons/icon-192.png'])).catch(() => { }));
   self.skipWaiting();
